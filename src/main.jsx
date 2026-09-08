@@ -16,8 +16,10 @@ import {
   Plus,
   Save,
   Sparkles,
+  Sun,
   Trash2,
   X,
+  Moon,
 } from 'lucide-react';
 import './styles.css';
 
@@ -98,12 +100,17 @@ const uid = () => Date.now();
 function App() {
   const [data, setData] = useState(initialData);
   const [menu, setMenu] = useState(false);
+  const [theme, setTheme] = useState(() => localStorage.getItem('portfolio-theme') || 'dark');
   useEffect(() => {
     fetch('/api/portfolio')
       .then((r) => (r.ok ? r.json() : Promise.reject()))
       .then(setData)
       .catch(() => {});
   }, []);
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem('portfolio-theme', theme);
+  }, [theme]);
   if (window.location.pathname === '/admin' || window.location.pathname.startsWith('/admin/'))
     return <AdminGate data={data} setData={setData} />;
   const p = data.profile;
@@ -116,13 +123,23 @@ function App() {
             .map((x) => x[0])
             .join('')}
         </a>
-        <button className="menu" onClick={() => setMenu(!menu)}>
-          {menu ? <X /> : <Menu />}
-        </button>
+        <div className="header-actions">
+          <button className="menu" onClick={() => setMenu(!menu)} aria-label="Toggle navigation">
+            {menu ? <X /> : <Menu />}
+          </button>
+        </div>
         <nav className={menu ? 'open' : ''}>
           <a href="#work">Work</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
+          <button
+            className="theme-toggle"
+            onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+            aria-label={theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'}
+            title={theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'}
+          >
+            {theme === 'light' ? <Moon size={17} /> : <Sun size={17} />}
+          </button>
         </nav>
       </header>
       <main id="top">
