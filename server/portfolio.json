@@ -8,7 +8,10 @@
     "github": "https://github.com",
     "linkedin": "https://linkedin.com",
     "availability": "Open to opportunities",
-    "photo": ""
+    "photo": "",
+    "photoScale": 1,
+    "photoX": 0,
+    "photoY": 0
   },
   "skills": [
     {

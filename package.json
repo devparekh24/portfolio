@@ -1,22 +1,26 @@
 {
-    "type": "module",
-    "scripts": {
+  "type": "module",
+  "scripts": {
     "dev": "vite",
     "server": "node server/index.js",
-        "build": "vite build",
-        "preview": "vite preview"
-    },
-    "dependencies": {
-        "@vitejs/plugin-react": "latest",
-        "vite": "latest",
-        "react": "latest",
-        "react-dom": "latest",
-        "lucide-react": "latest",
-        "bcryptjs": "latest",
-        "dotenv": "latest",
-        "express": "latest",
-        "jsonwebtoken": "latest"
-        ,"multer": "latest"
-    },
-    "devDependencies": {}
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "lucide-react": "latest",
+    "bcryptjs": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "jsonwebtoken": "latest",
+    "multer": "latest"
+  },
+  "devDependencies": {
+    "prettier": "latest"
+  }
 }
