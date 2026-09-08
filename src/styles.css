@@ -22,7 +22,7 @@
 }
 
 .image-adjustments {
-  border-top: 1px solid #dce0d9;
+  border-top: 1px solid var(--line);
   margin-top: 18px;
   padding-top: 15px;
   display: grid;
@@ -38,7 +38,7 @@
 .image-adjustments label {
   font: 11px 'DM Mono';
   text-transform: uppercase;
-  color: #637069;
+  color: var(--muted);
 }
 
 .image-adjustments output {
@@ -54,8 +54,9 @@
 
 .reset-image {
   justify-self: start;
-  border: 1px solid #cbd2ca;
-  background: white;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
   padding: 7px 9px;
   font: 12px 'DM Sans';
   cursor: pointer;
@@ -162,22 +163,25 @@
 
 .login-page {
   min-height: 100vh;
-  background: #eef0e9;
+  background: var(--admin-bg);
   display: grid;
   place-items: center;
   padding: 28px;
 }
 
-.login-page > .brand {
+.login-actions {
   position: fixed;
   top: 28px;
   left: 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .login-card {
   width: min(100%, 420px);
-  background: white;
-  border: 1px solid #dce0d9;
+  background: var(--surface);
+  border: 1px solid var(--line);
   padding: 38px;
   display: flex;
   flex-direction: column;
@@ -209,16 +213,16 @@
 .login-card label {
   font: 11px 'DM Mono';
   text-transform: uppercase;
-  color: #637069;
+  color: var(--muted);
 }
 
 .login-card input {
   display: block;
   width: 100%;
   margin-top: 8px;
-  border: 1px solid #d6dbd4;
+  border: 1px solid var(--line);
   padding: 12px;
-  background: #fafbf9;
+  background: var(--field-bg);
   color: var(--ink);
   font: 14px 'DM Sans';
 }
@@ -238,6 +242,9 @@
   --contact-bg: #18251e;
   --contact-text: #f5f7f3;
   --contact-muted: #c2ccc4;
+  --admin-bg: #eef0e9;
+  --surface: #ffffff;
+  --field-bg: #fafbf9;
 }
 
 :root[data-theme='dark'] {
@@ -249,6 +256,9 @@
   --contact-bg: #17201b;
   --contact-text: #f3f7f3;
   --contact-muted: #bbc8bf;
+  --admin-bg: #111a14;
+  --surface: #1c251f;
+  --field-bg: #152019;
 }
 
 :root[data-theme='dark'] .project {
@@ -1041,7 +1051,7 @@ footer div {
 
 .admin {
   min-height: 100vh;
-  background: #eef0e9;
+  background: var(--admin-bg);
   display: grid;
   grid-template-columns: 245px 1fr;
 }
@@ -1064,7 +1074,7 @@ footer div {
 .admin aside > p {
   font: 10px 'DM Mono';
   letter-spacing: 1px;
-  color: #aab3ad;
+  color: var(--muted);
   margin: 0 0 10px;
 }
 
@@ -1101,6 +1111,12 @@ footer div {
   justify-self: stretch;
 }
 
+.admin-head-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .admin-head {
   display: flex;
   align-items: center;
@@ -1115,8 +1131,8 @@ footer div {
 }
 
 .form-card {
-  background: white;
-  border: 1px solid #dce0d9;
+  background: var(--surface);
+  border: 1px solid var(--line);
   padding: 25px;
   margin-bottom: 16px;
 }
@@ -1130,16 +1146,16 @@ footer div {
 .grid label {
   font: 11px 'DM Mono';
   text-transform: uppercase;
-  color: #637069;
+  color: var(--muted);
 }
 
 .grid input,
 .grid textarea {
   width: 100%;
   margin-top: 8px;
-  border: 1px solid #d6dbd4;
+  border: 1px solid var(--line);
   padding: 11px;
-  background: #fafbf9;
+  background: var(--field-bg);
   color: var(--ink);
   font: 14px 'DM Sans';
   resize: vertical;
@@ -1161,7 +1177,7 @@ footer div {
 }
 
 .add {
-  border: 1px dashed #9ba59d;
+  border: 1px dashed var(--muted);
   background: transparent;
   padding: 11px 14px;
   display: flex;
@@ -1169,6 +1185,7 @@ footer div {
   gap: 7px;
   cursor: pointer;
   font: 600 13px 'DM Sans';
+  color: var(--ink);
   margin-bottom: 16px;
 }
 

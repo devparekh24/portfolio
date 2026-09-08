@@ -35,7 +35,7 @@ const initialData = {
     github: 'https://github.com',
     linkedin: 'https://linkedin.com',
     availability: 'Open to opportunities',
-    photo: 'https://api.dicebear.com/9.x/personas/svg?seed=Alex&backgroundColor=b6e3f4',
+    photo: '',
     photoScale: 1,
     photoX: 0,
     photoY: 0,
@@ -142,7 +142,7 @@ function App() {
     ? window.location.pathname.slice(basePath.length) || '/'
     : window.location.pathname;
   if (appPath === '/admin' || appPath.startsWith('/admin/'))
-    return <AdminGate data={data} setData={setData} />;
+    return <AdminGate data={data} setData={setData} theme={theme} setTheme={setTheme} />;
   const p = data.profile;
   return (
     <div>
@@ -403,7 +403,7 @@ function App() {
   );
 }
 
-function AdminGate({ data, setData }) {
+function AdminGate({ data, setData, theme, setTheme }) {
   const [token, setToken] = useState(() => sessionStorage.getItem('portfolio-admin-token'));
   const [form, setForm] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
@@ -432,9 +432,19 @@ function AdminGate({ data, setData }) {
   if (!token)
     return (
       <main className="login-page">
-        <a className="brand" href={import.meta.env.BASE_URL}>
-          AM
-        </a>
+        <div className="login-actions">
+          <a className="brand" href={import.meta.env.BASE_URL}>
+            AM
+          </a>
+          <button
+            className="theme-toggle"
+            onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+            aria-label={theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'}
+            title={theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'}
+          >
+            {theme === 'light' ? <Moon size={17} /> : <Sun size={17} />}
+          </button>
+        </div>
         <form className="login-card" onSubmit={login}>
           <LockKeyhole size={24} />
           <p className="eyebrow">Restricted access</p>
@@ -480,6 +490,8 @@ function AdminGate({ data, setData }) {
       data={data}
       setData={setData}
       token={token}
+      theme={theme}
+      setTheme={setTheme}
       logout={() => {
         sessionStorage.removeItem('portfolio-admin-token');
         setToken('');
@@ -488,7 +500,7 @@ function AdminGate({ data, setData }) {
   );
 }
 
-function Admin({ data, setData, token, logout }) {
+function Admin({ data, setData, token, theme, setTheme, logout }) {
   const [tab, setTab] = useState('profile');
   const [saved, setSaved] = useState(false);
   const [draft, setDraft] = useState(data);
@@ -579,10 +591,20 @@ function Admin({ data, setData, token, logout }) {
             <p className="eyebrow">Portfolio editor</p>
             <h1>{tabs.find((x) => x[0] === tab)[1]}</h1>
           </div>
-          <button className="button" onClick={save}>
-            <Save size={17} />
-            {saved ? 'Saved!' : 'Save changes'}
-          </button>
+          <div className="admin-head-actions">
+            <button
+              className="theme-toggle"
+              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+              aria-label={theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'}
+              title={theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'}
+            >
+              {theme === 'light' ? <Moon size={17} /> : <Sun size={17} />}
+            </button>
+            <button className="button" onClick={save}>
+              <Save size={17} />
+              {saved ? 'Saved!' : 'Save changes'}
+            </button>
+          </div>
         </div>
         {error && <p className="error">{error}</p>}
         {tab === 'profile' && (
