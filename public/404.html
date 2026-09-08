@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <script>
+      (function () {
+        var parts = window.location.pathname.split('/');
+        var base = '/' + (parts[1] || '') + '/';
+        var appPath = '/' + parts.slice(2).join('/');
+        window.location.replace(
+          base +
+            '?path=' +
+            encodeURIComponent(appPath + window.location.search + window.location.hash)
+        );
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: portfolio-api
+    runtime: node
+    buildCommand: npm ci
+    startCommand: npm run server
+    envVars:
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CORS_ORIGIN
+        sync: false

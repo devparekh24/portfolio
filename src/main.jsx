@@ -113,13 +113,22 @@ const initialData = {
   ],
 };
 const uid = () => Date.now();
+const apiBase = import.meta.env.VITE_API_URL?.replace(/\/$/, '') || '';
+const apiUrl = (path) => `${apiBase}${path}`;
 
 function App() {
   const [data, setData] = useState(initialData);
   const [menu, setMenu] = useState(false);
   const [theme, setTheme] = useState(() => localStorage.getItem('portfolio-theme') || 'dark');
+  const deploymentPath = new URLSearchParams(window.location.search).get('path');
+  if (deploymentPath)
+    window.history.replaceState(
+      null,
+      '',
+      `${import.meta.env.BASE_URL.replace(/\/$/, '')}${deploymentPath}`
+    );
   useEffect(() => {
-    fetch('/api/portfolio')
+    fetch(apiUrl('/api/portfolio'))
       .then((r) => (r.ok ? r.json() : Promise.reject()))
       .then(setData)
       .catch(() => {});
@@ -401,7 +410,7 @@ function AdminGate({ data, setData }) {
     setBusy(true);
     setError('');
     try {
-      const response = await fetch('/api/auth/login', {
+      const response = await fetch(apiUrl('/api/auth/login'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
@@ -482,7 +491,7 @@ function Admin({ data, setData, token, logout }) {
   const [error, setError] = useState('');
   const save = async () => {
     setError('');
-    const response = await fetch('/api/portfolio', {
+    const response = await fetch(apiUrl('/api/portfolio'), {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
       body: JSON.stringify(draft),
@@ -501,7 +510,7 @@ function Admin({ data, setData, token, logout }) {
     setError('');
     const form = new FormData();
     form.append('photo', photo);
-    const response = await fetch('/api/uploads/profile-photo', {
+    const response = await fetch(apiUrl('/api/uploads/profile-photo'), {
       method: 'POST',
       headers: { Authorization: `Bearer ${token}` },
       body: form,

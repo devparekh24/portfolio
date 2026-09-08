@@ -15,6 +15,7 @@
     "react-dom": "latest",
     "lucide-react": "latest",
     "bcryptjs": "latest",
+    "cors": "latest",
     "dotenv": "latest",
     "express": "latest",
     "jsonwebtoken": "latest",

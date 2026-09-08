@@ -2,6 +2,7 @@ import 'dotenv/config';
 import express from 'express';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
+import cors from 'cors';
 import multer from 'multer';
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -24,6 +25,11 @@ if (!secret || !adminEmail || !adminPassword) {
 }
 
 app.use(express.json({ limit: '1mb' }));
+const allowedOrigins = (process.env.CORS_ORIGIN || 'http://localhost:5173')
+  .split(',')
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+app.use(cors({ origin: allowedOrigins }));
 await fs.mkdir(uploadsDir, { recursive: true });
 app.use('/uploads', express.static(uploadsDir));
 const upload = multer({
@@ -60,7 +66,9 @@ app.post('/api/auth/login', async (req, res) => {
 app.post('/api/uploads/profile-photo', authorize, upload.single('photo'), (req, res) => {
   if (!req.file)
     return res.status(400).json({ error: 'Choose a JPEG, PNG, WebP, or GIF image up to 5 MB.' });
-  res.status(201).json({ url: `/uploads/${req.file.filename}` });
+  res
+    .status(201)
+    .json({ url: `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}` });
 });
 app.put('/api/portfolio', authorize, async (req, res) => {
   const { profile, skills, experience, education = [], projects } = req.body || {};
