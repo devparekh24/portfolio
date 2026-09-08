@@ -1,0 +1,87 @@
+{
+  "profile": {
+    "name": "Alex Morgan",
+    "role": "Full-stack developer & product builder",
+    "intro": "I design and build thoughtful digital experiences where clean engineering meets human-centered design.",
+    "location": "Bengaluru, India",
+    "email": "hello@alexmorgan.dev",
+    "github": "https://github.com",
+    "linkedin": "https://linkedin.com",
+    "availability": "Open to opportunities",
+    "photo": ""
+  },
+  "skills": [
+    {
+      "id": 1,
+      "name": "React",
+      "category": "Frontend"
+    },
+    {
+      "id": 2,
+      "name": "TypeScript",
+      "category": "Frontend"
+    },
+    {
+      "id": 3,
+      "name": "Next.js",
+      "category": "Frontend"
+    },
+    {
+      "id": 4,
+      "name": "Node.js",
+      "category": "Backend"
+    },
+    {
+      "id": 5,
+      "name": "PostgreSQL",
+      "category": "Backend"
+    },
+    {
+      "id": 6,
+      "name": "Figma",
+      "category": "Design"
+    }
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "role": "Senior Product Engineer",
+      "company": "Northstar Labs",
+      "period": "2023 — Present",
+      "description": "Leading end-to-end product development for a fast-moving B2B platform used by teams around the world."
+    },
+    {
+      "id": 2,
+      "role": "Frontend Engineer",
+      "company": "Canvas Collective",
+      "period": "2021 — 2023",
+      "description": "Built accessible design systems and high-performance customer-facing web experiences."
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Signal",
+      "type": "Analytics platform",
+      "description": "A calm, collaborative analytics workspace that turns noisy business data into decisions.",
+      "tags": "React, TypeScript, Node.js",
+      "link": "https://github.com"
+    },
+    {
+      "id": 2,
+      "title": "Kindred",
+      "type": "Community product",
+      "description": "A modern platform for communities to gather, share resources, and make meaningful connections.",
+      "tags": "Next.js, PostgreSQL, Figma",
+      "link": "https://github.com"
+    },
+    {
+      "id": 3,
+      "title": "Atlas",
+      "type": "Travel companion",
+      "description": "A beautifully simple itinerary planner built for curious travellers and their favourite places.",
+      "tags": "React, Maps, API",
+      "link": "https://github.com"
+    }
+  ]
+}
