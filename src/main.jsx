@@ -120,6 +120,7 @@ function App() {
   const [data, setData] = useState(initialData);
   const [menu, setMenu] = useState(false);
   const [theme, setTheme] = useState(() => localStorage.getItem('portfolio-theme') || 'dark');
+  const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
   const deploymentPath = new URLSearchParams(window.location.search).get('path');
   if (deploymentPath)
     window.history.replaceState(
@@ -137,7 +138,10 @@ function App() {
     document.documentElement.dataset.theme = theme;
     localStorage.setItem('portfolio-theme', theme);
   }, [theme]);
-  if (window.location.pathname === '/admin' || window.location.pathname.startsWith('/admin/'))
+  const appPath = window.location.pathname.startsWith(basePath)
+    ? window.location.pathname.slice(basePath.length) || '/'
+    : window.location.pathname;
+  if (appPath === '/admin' || appPath.startsWith('/admin/'))
     return <AdminGate data={data} setData={setData} />;
   const p = data.profile;
   return (
@@ -428,7 +432,7 @@ function AdminGate({ data, setData }) {
   if (!token)
     return (
       <main className="login-page">
-        <a className="brand" href="/">
+        <a className="brand" href={import.meta.env.BASE_URL}>
           AM
         </a>
         <form className="login-card" onSubmit={login}>
@@ -562,7 +566,7 @@ function Admin({ data, setData, token, logout }) {
             {label}
           </button>
         ))}
-        <a className="back" href="/">
+        <a className="back" href={import.meta.env.BASE_URL}>
           ← View portfolio
         </a>
         <button className="logout" onClick={logout}>

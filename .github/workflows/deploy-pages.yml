@@ -36,7 +36,7 @@ jobs:
       - name: Build website
         env:
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
-          VITE_API_URL: ${{ vars.VITE_API_URL }}
+          VITE_API_URL: https://portfolio-1-jf4k.onrender.com
         run: npm run build
 
       - name: Configure GitHub Pages
