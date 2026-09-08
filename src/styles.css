@@ -235,6 +235,9 @@
   --line: #d9d9d0;
   --muted: #68726d;
   --page-padding: clamp(24px, 5vw, 96px);
+  --contact-bg: #18251e;
+  --contact-text: #f5f7f3;
+  --contact-muted: #c2ccc4;
 }
 
 :root[data-theme='dark'] {
@@ -243,6 +246,9 @@
   --lime: #d9ff64;
   --line: #3b4b40;
   --muted: #bbc8bf;
+  --contact-bg: #17201b;
+  --contact-text: #f3f7f3;
+  --contact-muted: #bbc8bf;
 }
 
 :root[data-theme='dark'] .project {
@@ -456,7 +462,10 @@ h2 em {
 }
 
 h1 em {
-  color: #739a00;
+  color: transparent;
+  background: linear-gradient(105deg, #ff8868 5%, #d7a0ff 47%, #60dfd2 92%);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .lede {
@@ -610,6 +619,144 @@ h1 em {
   margin-top: 65px;
 }
 
+.skills-section {
+  padding-top: 170px;
+}
+
+.skills-heading {
+  max-width: none;
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  align-items: start;
+  padding-bottom: 38px;
+  border-bottom: 1px solid var(--line);
+}
+
+.skills-heading .eyebrow {
+  padding-top: 10px;
+}
+
+.skills-heading h2 {
+  margin: 0;
+}
+
+.skills-heading em,
+.credentials-heading em {
+  color: #b898ff;
+}
+
+.skill-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding-top: 70px;
+}
+
+.skill-card {
+  --accent: var(--lime);
+  position: relative;
+  min-height: 340px;
+  padding: 34px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--cream) 92%, var(--ink));
+  overflow: hidden;
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease,
+    background 0.28s ease;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  right: -75px;
+  top: -75px;
+  border-radius: 50%;
+  background: var(--accent);
+  filter: blur(44px);
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow: 0 22px 48px color-mix(in srgb, var(--accent) 13%, transparent);
+}
+
+.skill-card:hover::before {
+  opacity: 0.18;
+}
+.skill-card > * {
+  position: relative;
+  z-index: 1;
+}
+.skill-card.tone-1 {
+  --accent: #62dfd3;
+}
+.skill-card.tone-2 {
+  --accent: #ff8168;
+}
+.skill-card.tone-3 {
+  --accent: #c29cff;
+}
+.skill-card.tone-4 {
+  --accent: #ffc56c;
+}
+.skill-card.tone-5 {
+  --accent: #c8f34a;
+}
+
+.skill-card-top {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font: 11px 'DM Mono';
+  letter-spacing: 2px;
+}
+.skill-card-top i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 16px var(--accent);
+}
+.skill-card h3 {
+  margin: 34px 0 9px;
+  font: 600 clamp(28px, 2.1vw, 38px) 'Playfair Display';
+  letter-spacing: -1px;
+}
+.skill-card > p {
+  color: var(--muted);
+  font: 11px 'DM Mono';
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.skill-list {
+  margin-top: 28px;
+  border-top: 1px dashed var(--line);
+}
+.skill-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 65%, transparent);
+  color: var(--muted);
+  font: 14px 'DM Mono';
+}
+.skill-list b {
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 70%, transparent);
+  padding: 3px 6px;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
 .project {
   background: #e7e5dd;
   transition:
@@ -745,6 +892,71 @@ h1 em {
   padding-top: 170px;
 }
 
+.education-section {
+  padding-top: 170px;
+}
+.credentials-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  max-width: none;
+  padding-bottom: 38px;
+  border-bottom: 1px solid var(--line);
+}
+.credentials-heading h2 {
+  margin: 0;
+}
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  padding-top: 70px;
+}
+.education-card {
+  --accent: #62dfd3;
+  border: 1px solid var(--line);
+  padding: 42px 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 22px;
+  background: color-mix(in srgb, var(--cream) 92%, var(--ink));
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.education-card.tone-1 {
+  --accent: #c29cff;
+}
+.education-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 18px 34px color-mix(in srgb, var(--accent) 12%, transparent);
+}
+.education-card h3 {
+  font: 600 29px 'Playfair Display';
+  margin-bottom: 13px;
+}
+.education-card p {
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.education-card span {
+  font: 11px 'DM Mono';
+  color: var(--muted);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.education-card > b {
+  height: fit-content;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 8px 10px;
+  font: 11px 'DM Mono';
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 .timeline {
   border-top: 1px solid var(--line);
 }
@@ -780,14 +992,14 @@ h1 em {
 }
 
 .contact {
-  background: var(--ink);
-  color: var(--cream);
+  background: radial-gradient(circle at 84% 20%, #304832 0%, transparent 28%), var(--contact-bg);
+  color: var(--contact-text);
   margin-top: 150px;
   padding: 115px var(--page-padding);
 }
 
 .contact .eyebrow {
-  color: #b9c1bb;
+  color: var(--contact-muted);
 }
 
 .contact h2 {
@@ -797,17 +1009,21 @@ h1 em {
 }
 
 .contact h2 em {
-  color: var(--lime);
+  color: transparent;
+  background: linear-gradient(105deg, #ff8868 5%, #d7a0ff 47%, #60dfd2 92%);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .light {
-  background: var(--lime);
-  color: var(--ink);
+  background: #ff8b6e;
+  color: #201914;
   margin-top: 15px;
 }
 
 .light:hover {
-  box-shadow: 0 10px 28px color-mix(in srgb, var(--lime) 34%, transparent);
+  background: #ffad96;
+  box-shadow: 0 10px 28px color-mix(in srgb, #ff8b6e 44%, transparent);
 }
 
 footer {
@@ -1023,6 +1239,36 @@ footer div {
   .projects {
     grid-template-columns: 1fr;
     margin-top: 35px;
+  }
+
+  .skills-section,
+  .education-section {
+    padding-top: 95px;
+  }
+
+  .skills-heading,
+  .credentials-heading {
+    display: block;
+    padding-bottom: 25px;
+  }
+
+  .skills-heading .eyebrow {
+    padding-top: 0;
+  }
+
+  .skill-cards,
+  .education-grid {
+    grid-template-columns: 1fr;
+    padding-top: 35px;
+  }
+
+  .skill-card {
+    min-height: auto;
+    padding: 26px;
+  }
+
+  .education-card {
+    padding: 28px 24px;
   }
 
   .project-visual {

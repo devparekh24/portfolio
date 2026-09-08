@@ -63,12 +63,18 @@ app.post('/api/uploads/profile-photo', authorize, upload.single('photo'), (req, 
   res.status(201).json({ url: `/uploads/${req.file.filename}` });
 });
 app.put('/api/portfolio', authorize, async (req, res) => {
-  const { profile, skills, experience, projects } = req.body || {};
-  if (!profile || !Array.isArray(skills) || !Array.isArray(experience) || !Array.isArray(projects))
+  const { profile, skills, experience, education = [], projects } = req.body || {};
+  if (
+    !profile ||
+    !Array.isArray(skills) ||
+    !Array.isArray(experience) ||
+    !Array.isArray(education) ||
+    !Array.isArray(projects)
+  )
     return res.status(400).json({ error: 'Invalid portfolio content.' });
   await fs.writeFile(
     contentFile,
-    JSON.stringify({ profile, skills, experience, projects }, null, 2) + '\n'
+    JSON.stringify({ profile, skills, experience, education, projects }, null, 2) + '\n'
   );
   res.json({ ok: true });
 });

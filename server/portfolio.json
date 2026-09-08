@@ -45,6 +45,22 @@
       "category": "Design"
     }
   ],
+  "education": [
+    {
+      "id": 1,
+      "program": "Applied Computer Science",
+      "school": "Concordia University",
+      "period": "2024 — 2025",
+      "credential": "Master's"
+    },
+    {
+      "id": 2,
+      "program": "Computer Engineering",
+      "school": "Gujarat Technological University",
+      "period": "2019 — 2023",
+      "credential": "Bachelor's"
+    }
+  ],
   "experience": [
     {
       "id": 1,

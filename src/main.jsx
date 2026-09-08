@@ -8,6 +8,7 @@ import {
   EyeOff,
   FolderGit2,
   GitFork,
+  GraduationCap,
   Link,
   LockKeyhole,
   Mail,
@@ -40,12 +41,28 @@ const initialData = {
     photoY: 0,
   },
   skills: [
-    { id: 1, name: 'React', category: 'Frontend' },
-    { id: 2, name: 'TypeScript', category: 'Frontend' },
-    { id: 3, name: 'Next.js', category: 'Frontend' },
-    { id: 4, name: 'Node.js', category: 'Backend' },
-    { id: 5, name: 'PostgreSQL', category: 'Backend' },
-    { id: 6, name: 'Figma', category: 'Design' },
+    { id: 1, name: 'React', category: 'Interface', level: 'Advanced' },
+    { id: 2, name: 'TypeScript', category: 'Interface', level: 'Advanced' },
+    { id: 3, name: 'Next.js', category: 'Interface', level: 'Proficient' },
+    { id: 4, name: 'Node.js', category: 'Server & APIs', level: 'Advanced' },
+    { id: 5, name: 'PostgreSQL', category: 'Databases', level: 'Advanced' },
+    { id: 6, name: 'Figma', category: 'Design systems', level: 'Proficient' },
+  ],
+  education: [
+    {
+      id: 1,
+      program: 'Applied Computer Science',
+      school: 'Concordia University',
+      period: '2024 — 2025',
+      credential: "Master's",
+    },
+    {
+      id: 2,
+      program: 'Computer Engineering',
+      school: 'Gujarat Technological University',
+      period: '2019 — 2023',
+      credential: "Bachelor's",
+    },
   ],
   experience: [
     {
@@ -130,6 +147,7 @@ function App() {
         </div>
         <nav className={menu ? 'open' : ''}>
           <a href="#work">Work</a>
+          <a href="#skills">Skills</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
           <button
@@ -227,6 +245,52 @@ function App() {
             ))}
           </div>
         </section>
+        <section id="skills" className="skills-section section">
+          <div className="section-heading skills-heading">
+            <p className="eyebrow">02 / Capabilities</p>
+            <h2>
+              Tools I use to make
+              <br />
+              <em>things work.</em>
+            </h2>
+          </div>
+          <div className="skill-cards">
+            {[...new Set(data.skills.map((skill) => skill.category))].map((category, index) => {
+              const skills = data.skills.filter((skill) => skill.category === category);
+              return (
+                <article className={`skill-card tone-${index % 6}`} key={category}>
+                  <div className="skill-card-top">
+                    <span>
+                      {String(index + 1).padStart(2, '0')} /{' '}
+                      {String(new Set(data.skills.map((skill) => skill.category)).size).padStart(
+                        2,
+                        '0'
+                      )}
+                    </span>
+                    <i />
+                  </div>
+                  <h3>{category}</h3>
+                  <p>
+                    —{' '}
+                    {category === 'Interface'
+                      ? 'Frontend'
+                      : category === 'Server & APIs'
+                        ? 'Backend'
+                        : 'Technical craft'}
+                  </p>
+                  <div className="skill-list">
+                    {skills.map((skill) => (
+                      <div key={skill.id}>
+                        <span>{skill.name}</span>
+                        <b>{skill.level || 'Proficient'}</b>
+                      </div>
+                    ))}
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </section>
         <section id="about" className="about section">
           <div className="section-heading">
             <p className="eyebrow">A little about me</p>
@@ -270,6 +334,26 @@ function App() {
                   <h4>{x.company}</h4>
                   <span>{x.description}</span>
                 </div>
+              </article>
+            ))}
+          </div>
+        </section>
+        <section className="education-section section">
+          <div className="section-heading credentials-heading">
+            <p className="eyebrow">04 / Credentials</p>
+            <h2>
+              Where I <em>studied.</em>
+            </h2>
+          </div>
+          <div className="education-grid">
+            {(data.education || []).map((item, index) => (
+              <article className={`education-card tone-${index % 6}`} key={item.id}>
+                <div>
+                  <h3>{item.program}</h3>
+                  <p>{item.school}</p>
+                  <span>{item.period}</span>
+                </div>
+                <b>{item.credential}</b>
               </article>
             ))}
           </div>
@@ -440,6 +524,7 @@ function Admin({ data, setData, token, logout }) {
     ['profile', 'Profile'],
     ['skills', 'Skills'],
     ['experience', 'Experience'],
+    ['education', 'Education'],
     ['projects', 'Projects'],
   ];
   return (
@@ -458,6 +543,8 @@ function Admin({ data, setData, token, logout }) {
               <Sparkles />
             ) : id === 'experience' ? (
               <BriefcaseBusiness />
+            ) : id === 'education' ? (
+              <GraduationCap />
             ) : id === 'projects' ? (
               <FolderGit2 />
             ) : (
@@ -583,13 +670,13 @@ function Admin({ data, setData, token, logout }) {
         {tab === 'skills' && (
           <Editor
             items={draft.skills}
-            fields={['name', 'category']}
+            fields={['name', 'category', 'level']}
             onChange={(v) => set('skills', v)}
             onRemove={(id) => remove('skills', id)}
             onAdd={() =>
               set('skills', [
                 ...draft.skills,
-                { id: uid(), name: 'New skill', category: 'General' },
+                { id: uid(), name: 'New skill', category: 'General', level: 'Proficient' },
               ])
             }
           />
@@ -609,6 +696,26 @@ function Admin({ data, setData, token, logout }) {
                   company: 'Company',
                   period: '2026 — Present',
                   description: 'Describe your work.',
+                },
+              ])
+            }
+          />
+        )}
+        {tab === 'education' && (
+          <Editor
+            items={draft.education || []}
+            fields={['program', 'school', 'period', 'credential']}
+            onChange={(v) => set('education', v)}
+            onRemove={(id) => remove('education', id)}
+            onAdd={() =>
+              set('education', [
+                ...(draft.education || []),
+                {
+                  id: uid(),
+                  program: 'New program',
+                  school: 'Institution',
+                  period: '2026',
+                  credential: 'Certificate',
                 },
               ])
             }
