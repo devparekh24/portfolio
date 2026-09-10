@@ -1,14 +1,14 @@
 {
   "profile": {
     "name": "Dev Parekh",
-    "role": "Full-stack developer & product builder",
-    "intro": "I design and build thoughtful digital experiences where clean engineering meets human-centered design.",
+    "role": "Full Stack Developer",
+    "intro": "Results-driven Full Stack Developer with 3+ years of experience in designing, developing, and maintaining scalable web applications using React.js, Next.js, Node.js, Express.js, and MongoDB. Skilled in building RESTful APIs, integrating third-party services, and implementing responsive user interfaces. Adept at collaborating with cross-functional teams to deliver high-quality software solutions on time and within budget.",
     "location": "Surat, India",
     "email": "devparekh2424@gmail.com",
     "github": "https://github.com/devparekh24",
     "linkedin": "https://www.linkedin.com/in/devparekh24",
     "availability": "Open to opportunities",
-    "photo": "",
+    "photo": "./profileImg.jpg",
     "photoScale": 1,
     "photoX": 0,
     "photoY": 0
@@ -380,21 +380,21 @@
       "role": "Software Engineer",
       "company": "Lanet Team Software Solutions Pvt. Ltd.",
       "period": "July 2023 — Present",
-      "description": "Working on full-stack and backend development across healthcare, e-commerce, financial, and fitness domains. Experienced with React.js, Next.js, Node.js, NestJS, TypeScript, MongoDB, REST APIs, GraphQL, microservices, AWS, GCP, and event-driven architecture."
+      "description": "Working on multiple enterprise applications across healthcare, e-commerce, finance, and fitness domains, delivering scalable full-stack solutions using modern web technologies. Experienced with React.js, Next.js, Node.js, NestJS, TypeScript, MongoDB, REST APIs, GraphQL, microservices, AWS, GCP, and event-driven architecture."
     },
     {
       "id": 2,
       "role": "React.js Developer Intern",
-      "company": "Lanet Team Software Solutions Pvt. Ltd.",
-      "period": "Jan 2023 — June 2023",
-      "description": "Worked on MBSPro, a healthcare platform, primarily focusing on frontend development using React, Next.js, TypeScript, Redux Toolkit, and MUI. Led MUI migration work, developed a reusable Design System published as an npm package, and worked on performance optimization using lazy loading."
+      "company": "Modi Software Solutions Pvt. Ltd.",
+      "period": "Jan 2023 — Jun 2023",
+      "description": "Built a strong foundation in JavaScript (ES6+), Advanced JavaScript, and React.js by developing a CRUD-based Shopping Cart application, gaining hands-on experience in component-based development, API integration, and responsive UI design. Developed a responsive BYJU'S admin portal for managing employee records and educational courses using React.js and modern UI libraries including Bootstrap, React Bootstrap, Ant Design (AntD), and Material UI (MUI)."
     },
     {
       "id": 3,
       "role": "Web Developer Intern",
       "company": "PALSOFT India",
-      "period": "Jan 2022 — Dec 2023",
-      "description": "Worked on projects including GetMeJuice, RH, and RBG, contributing to NestJS microservices, REST and GraphQL APIs, cloud services, third-party integrations, serverless architecture, event-driven workflows, and automated testing."
+      "period": "Jun 2022 — Dec 2022",
+      "description": "Learned C#, ASP.NET, Visual Studio, and MS SQL Server through hands-on development of a Cafe Management System from scratch. Implemented CRUD operations, database connectivity, SQL queries, and application logic while gaining practical experience in backend and database development."
     }
   ],
   "projects": [
@@ -428,7 +428,7 @@
       "type": "Fitness platform / Serverless Backend",
       "description": "Worked on a serverless backend architecture using Node.js and AWS services. Developed backend workflows using Lambda, S3, SNS, SQS, DynamoDB, and CloudWatch with a focus on scalable and event-driven application architecture.",
       "tags": "Node.js, AWS Lambda, S3, DynamoDB, SNS, SQS, CloudWatch, Serverless",
-      "link": "https://github.com"
+      "link": "https://www.redbeltgym.com"
     },
     {
       "id": 5,
@@ -452,7 +452,7 @@
       "type": "Desktop CRUD application",
       "description": "Built a Cafe Management System from scratch as a learning project using ASP.NET, Visual Studio, and MS SQL Server, implementing CRUD functionality.",
       "tags": "ASP.NET, C#, MS SQL Server, Visual Studio",
-      "link": "https://github.com"
+      "link": "https://github.com/devparekh24/CafeManagementSys"
     },
     {
       "id": 8,
@@ -460,7 +460,7 @@
       "type": "Responsive Admin Platform",
       "description": "Developed a responsive admin system for managing employee records and educational courses while gaining hands-on experience with React and modern UI component libraries.",
       "tags": "React.js, JavaScript, Bootstrap, React Bootstrap, Ant Design, MUI",
-      "link": "https://github.com"
+      "link": "https://byjus.com"
     },
     {
       "id": 9,
@@ -468,7 +468,7 @@
       "type": "CRUD learning project",
       "description": "Built a CRUD-based Shopping Cart application while learning JavaScript and React, with hands-on experience in building interactive user interfaces.",
       "tags": "JavaScript, React.js, HTML, CSS",
-      "link": "https://github.com"
+      "link": "https://github.com/devparekh24/cart-app"
     }
   ]
 }
