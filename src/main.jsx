@@ -26,38 +26,375 @@ import './styles.css';
 
 const initialData = {
   profile: {
-    name: 'Alex Morgan',
-    role: 'Full-stack developer & product builder',
+    name: 'Dev Parekh',
+    role: 'Full Stack Developer',
     intro:
-      'I design and build thoughtful digital experiences where clean engineering meets human-centered design.',
-    location: 'Bengaluru, India',
-    email: 'hello@alexmorgan.dev',
-    github: 'https://github.com',
-    linkedin: 'https://linkedin.com',
+      'Results-driven Full Stack Developer with 3+ years of experience in designing, developing, and maintaining scalable web applications using React.js, Next.js, Node.js, Express.js, and MongoDB. Skilled in building RESTful APIs, integrating third-party services, and implementing responsive user interfaces. Adept at collaborating with cross-functional teams to deliver high-quality software solutions on time and within budget.',
+    location: 'Surat, India',
+    email: 'devparekh2424@gmail.com',
+    github: 'https://github.com/devparekh24',
+    linkedin: 'https://www.linkedin.com/in/devparekh24',
     availability: 'Open to opportunities',
-    photo: '',
+    photo: './profileImg.jpg',
     photoScale: 1,
     photoX: 0,
     photoY: 0,
   },
   skills: [
-    { id: 1, name: 'React', category: 'Interface', level: 'Advanced' },
-    { id: 2, name: 'TypeScript', category: 'Interface', level: 'Advanced' },
-    { id: 3, name: 'Next.js', category: 'Interface', level: 'Proficient' },
-    { id: 4, name: 'Node.js', category: 'Server & APIs', level: 'Advanced' },
-    { id: 5, name: 'PostgreSQL', category: 'Databases', level: 'Advanced' },
-    { id: 6, name: 'Figma', category: 'Design systems', level: 'Proficient' },
+    {
+      id: 1,
+      name: 'JavaScript',
+      category: 'Programming',
+    },
+    {
+      id: 2,
+      name: 'TypeScript',
+      category: 'Programming',
+    },
+    {
+      id: 3,
+      name: 'Python',
+      category: 'Programming',
+    },
+    {
+      id: 4,
+      name: 'Java',
+      category: 'Programming',
+    },
+    {
+      id: 5,
+      name: 'C/C++',
+      category: 'Programming',
+    },
+    {
+      id: 6,
+      name: 'PHP',
+      category: 'Programming',
+    },
+    {
+      id: 7,
+      name: 'React.js',
+      category: 'Frontend',
+    },
+    {
+      id: 8,
+      name: 'Next.js',
+      category: 'Frontend',
+    },
+    {
+      id: 9,
+      name: 'Redux',
+      category: 'Frontend',
+    },
+    {
+      id: 10,
+      name: 'Redux Toolkit',
+      category: 'Frontend',
+    },
+    {
+      id: 11,
+      name: 'Redux Thunk',
+      category: 'Frontend',
+    },
+    {
+      id: 12,
+      name: 'Redux Saga',
+      category: 'Frontend',
+    },
+    {
+      id: 13,
+      name: 'RTK Query',
+      category: 'Frontend',
+    },
+    {
+      id: 14,
+      name: 'HTML5',
+      category: 'Frontend',
+    },
+    {
+      id: 15,
+      name: 'CSS3',
+      category: 'Frontend',
+    },
+    {
+      id: 16,
+      name: 'Tailwind CSS',
+      category: 'Frontend',
+    },
+    {
+      id: 17,
+      name: 'Bootstrap',
+      category: 'Frontend',
+    },
+    {
+      id: 18,
+      name: 'React Bootstrap',
+      category: 'Frontend',
+    },
+    {
+      id: 19,
+      name: 'Material UI',
+      category: 'Frontend',
+    },
+    {
+      id: 20,
+      name: 'Ant Design',
+      category: 'Frontend',
+    },
+    {
+      id: 21,
+      name: 'Node.js',
+      category: 'Backend',
+    },
+    {
+      id: 22,
+      name: 'Express.js',
+      category: 'Backend',
+    },
+    {
+      id: 23,
+      name: 'NestJS',
+      category: 'Backend',
+    },
+    {
+      id: 24,
+      name: 'ASP.NET',
+      category: 'Backend',
+    },
+    {
+      id: 25,
+      name: 'REST APIs',
+      category: 'Backend',
+    },
+    {
+      id: 26,
+      name: 'GraphQL',
+      category: 'Backend',
+    },
+    {
+      id: 27,
+      name: 'Socket.IO',
+      category: 'Backend',
+    },
+    {
+      id: 28,
+      name: 'Webhooks',
+      category: 'Backend',
+    },
+    {
+      id: 29,
+      name: 'Microservices',
+      category: 'Architecture',
+    },
+    {
+      id: 30,
+      name: 'Event-Driven Architecture',
+      category: 'Architecture',
+    },
+    {
+      id: 31,
+      name: 'MongoDB',
+      category: 'Database',
+    },
+    {
+      id: 32,
+      name: 'Microsoft SQL Server',
+      category: 'Database',
+    },
+    {
+      id: 33,
+      name: 'PostgreSQL',
+      category: 'Database',
+    },
+    {
+      id: 34,
+      name: 'AWS',
+      category: 'Cloud',
+    },
+    {
+      id: 35,
+      name: 'AWS Lambda',
+      category: 'Cloud',
+    },
+    {
+      id: 36,
+      name: 'API Gateway',
+      category: 'Cloud',
+    },
+    {
+      id: 37,
+      name: 'Amazon S3',
+      category: 'Cloud',
+    },
+    {
+      id: 38,
+      name: 'DynamoDB',
+      category: 'Cloud',
+    },
+    {
+      id: 39,
+      name: 'SNS',
+      category: 'Cloud',
+    },
+    {
+      id: 40,
+      name: 'SQS',
+      category: 'Cloud',
+    },
+    {
+      id: 41,
+      name: 'CloudWatch',
+      category: 'Cloud',
+    },
+    {
+      id: 42,
+      name: 'IAM',
+      category: 'Cloud',
+    },
+    {
+      id: 43,
+      name: 'GCP',
+      category: 'Cloud',
+    },
+    {
+      id: 44,
+      name: 'GCP Pub/Sub',
+      category: 'Cloud',
+    },
+    {
+      id: 45,
+      name: 'GCP Cloud Functions',
+      category: 'Cloud',
+    },
+    {
+      id: 46,
+      name: 'GCP Cloud Run',
+      category: 'Cloud',
+    },
+    {
+      id: 47,
+      name: 'Serverless Architecture',
+      category: 'Cloud',
+    },
+    {
+      id: 48,
+      name: 'Docker',
+      category: 'DevOps',
+    },
+    {
+      id: 49,
+      name: 'Git',
+      category: 'Tools',
+    },
+    {
+      id: 50,
+      name: 'GitHub',
+      category: 'Tools',
+    },
+    {
+      id: 51,
+      name: 'Postman',
+      category: 'Tools',
+    },
+    {
+      id: 52,
+      name: 'Swagger',
+      category: 'Tools',
+    },
+    {
+      id: 53,
+      name: 'VS Code',
+      category: 'Tools',
+    },
+    {
+      id: 54,
+      name: 'WebStorm',
+      category: 'Tools',
+    },
+    {
+      id: 55,
+      name: 'PyCharm',
+      category: 'Tools',
+    },
+    {
+      id: 56,
+      name: 'Jest',
+      category: 'Testing',
+    },
+    {
+      id: 57,
+      name: 'Playwright',
+      category: 'Testing',
+    },
+    {
+      id: 58,
+      name: 'E2E Testing',
+      category: 'Testing',
+    },
+    {
+      id: 59,
+      name: 'OpenAI APIs',
+      category: 'GenAI',
+    },
+    {
+      id: 60,
+      name: 'Claude AI',
+      category: 'GenAI',
+    },
+    {
+      id: 61,
+      name: 'LangChain',
+      category: 'GenAI',
+    },
+    {
+      id: 62,
+      name: 'RAG',
+      category: 'GenAI',
+    },
+    {
+      id: 63,
+      name: 'AI Agents',
+      category: 'GenAI',
+    },
+    {
+      id: 64,
+      name: 'MCP',
+      category: 'GenAI',
+    },
+    {
+      id: 65,
+      name: 'MCP Servers',
+      category: 'GenAI',
+    },
+    {
+      id: 66,
+      name: 'Prompt Engineering',
+      category: 'GenAI',
+    },
+    {
+      id: 67,
+      name: 'HubSpot APIs',
+      category: 'Integrations',
+    },
+    {
+      id: 68,
+      name: 'HubSpot Custom Associations',
+      category: 'Integrations',
+    },
+    {
+      id: 69,
+      name: 'Webflow CMS',
+      category: 'Integrations',
+    },
+    {
+      id: 70,
+      name: 'Firebase',
+      category: 'Cloud',
+    },
   ],
   education: [
     {
       id: 1,
-      program: 'Applied Computer Science',
-      school: 'Concordia University',
-      period: '2024 — 2025',
-      credential: "Master's",
-    },
-    {
-      id: 2,
       program: 'Computer Engineering',
       school: 'Gujarat Technological University',
       period: '2019 — 2023',
@@ -67,48 +404,110 @@ const initialData = {
   experience: [
     {
       id: 1,
-      role: 'Senior Product Engineer',
-      company: 'Northstar Labs',
-      period: '2023 — Present',
+      role: 'Software Engineer',
+      company: 'Lanet Team Software Solutions Pvt. Ltd.',
+      period: 'July 2023 — Present',
       description:
-        'Leading end-to-end product development for a fast-moving B2B platform used by teams around the world.',
+        'Working on multiple enterprise applications across healthcare, e-commerce, finance, and fitness domains, delivering scalable full-stack solutions using modern web technologies. Experienced with React.js, Next.js, Node.js, NestJS, TypeScript, MongoDB, REST APIs, GraphQL, microservices, AWS, GCP, and event-driven architecture.',
     },
     {
       id: 2,
-      role: 'Frontend Engineer',
-      company: 'Canvas Collective',
-      period: '2021 — 2023',
+      role: 'React.js Developer Intern',
+      company: 'Modi Software Solutions Pvt. Ltd.',
+      period: 'Jan 2023 — Jun 2023',
       description:
-        'Built accessible design systems and high-performance customer-facing web experiences.',
+        "Built a strong foundation in JavaScript (ES6+), Advanced JavaScript, and React.js by developing a CRUD-based Shopping Cart application, gaining hands-on experience in component-based development, API integration, and responsive UI design. Developed a responsive BYJU'S admin portal for managing employee records and educational courses using React.js and modern UI libraries including Bootstrap, React Bootstrap, Ant Design (AntD), and Material UI (MUI).",
+    },
+    {
+      id: 3,
+      role: 'Web Developer Intern',
+      company: 'PALSOFT India',
+      period: 'Jun 2022 — Dec 2022',
+      description:
+        'Learned C#, ASP.NET, Visual Studio, and MS SQL Server through hands-on development of a Cafe Management System from scratch. Implemented CRUD operations, database connectivity, SQL queries, and application logic while gaining practical experience in backend and database development.',
     },
   ],
   projects: [
     {
       id: 1,
-      title: 'Signal',
-      type: 'Analytics platform',
+      title: 'MBSPro',
+      type: 'Healthcare / AI Billing Platform',
       description:
-        'A calm, collaborative analytics workspace that turns noisy business data into decisions.',
-      tags: 'React, TypeScript, Node.js',
-      link: 'https://github.com',
+        'A healthcare platform for medical consultation, AI-assisted clinical documentation, and MBS billing workflows. Worked primarily on the frontend using Next.js, React, TypeScript, and MUI, including a reusable Design System, UI improvements, new features, and performance optimization through lazy loading.',
+      tags: 'Next.js, React, TypeScript, MUI, Redux Toolkit, ASP.NET',
+      link: 'https://www.mbspro.com.au',
     },
     {
       id: 2,
-      title: 'Kindred',
-      type: 'Community product',
+      title: 'Restoration Hardware (RH)',
+      type: 'E-commerce platform',
       description:
-        'A modern platform for communities to gather, share resources, and make meaningful connections.',
-      tags: 'Next.js, PostgreSQL, Figma',
-      link: 'https://github.com',
+        'Worked on an e-commerce platform, developing features, fixing bugs, and contributing to application modules and components. Worked with React, TypeScript, GraphQL, Context API, Jest, and Playwright.',
+      tags: 'React, TypeScript, GraphQL, Context API, Jest, Playwright',
+      link: 'https://rh.com',
     },
     {
       id: 3,
-      title: 'Atlas',
-      type: 'Travel companion',
+      title: 'GetMeJuice',
+      type: 'Financial / Loan Processing Platform',
       description:
-        'A beautifully simple itinerary planner built for curious travellers and their favourite places.',
-      tags: 'React, Maps, API',
-      link: 'https://github.com',
+        'A financial platform focused on loan processing workflows. Developed NestJS microservices and worked with GCP Pub/Sub, Webhooks, HubSpot APIs, Webflow CMS, and Firebase. Implemented event-driven communication for real-time loan processing updates.',
+      tags: 'Next.js, NestJS, TypeScript, GCP, Firebase, HubSpot, Webhooks, Webflow',
+      link: 'https://getmejuice.com',
+    },
+    {
+      id: 4,
+      title: 'Red Belt Gym (RBG)',
+      type: 'Fitness platform / Serverless Backend',
+      description:
+        'Worked on a serverless backend architecture using Node.js and AWS services. Developed backend workflows using Lambda, S3, SNS, SQS, DynamoDB, and CloudWatch with a focus on scalable and event-driven application architecture.',
+      tags: 'Node.js, AWS Lambda, S3, DynamoDB, SNS, SQS, CloudWatch, Serverless',
+      link: 'https://www.redbeltgym.com',
+    },
+    {
+      id: 5,
+      title: 'DriveEasy - Car Rental System',
+      type: 'MERN car rental platform',
+      description:
+        'A MERN-based car rental platform with JWT authentication, car listings, search and filtering, flexible rental pricing, booking and availability management, Razorpay payments, notifications, and an admin dashboard for managing vehicles, users, bookings, and damage reports.',
+      tags: 'React, TypeScript, Redux Toolkit, Node.js, Express.js, MongoDB, JWT, Razorpay',
+      link: 'https://github.com/devparekh24/DriveEasy-CRS',
+    },
+    {
+      id: 6,
+      title: 'CryptoTwits Dashboard',
+      type: 'Cryptocurrency analytics dashboard',
+      description:
+        'A cryptocurrency dashboard built with React.js that integrates the CoinGecko API to display crypto data and market insights, with interactive ApexCharts visualizations and a responsive Bootstrap dark-mode interface.',
+      tags: 'React.js, ApexCharts, Bootstrap, CoinGecko API',
+      link: 'https://github.com/devparekh24/cryptotwits-dashboard',
+    },
+    {
+      id: 7,
+      title: 'Cafe Management System',
+      type: 'Desktop CRUD application',
+      description:
+        'Built a Cafe Management System from scratch as a learning project using ASP.NET, Visual Studio, and MS SQL Server, implementing CRUD functionality.',
+      tags: 'ASP.NET, C#, MS SQL Server, Visual Studio',
+      link: 'https://github.com/devparekh24/CafeManagementSys',
+    },
+    {
+      id: 8,
+      title: "BYJU'S Admin System",
+      type: 'Responsive Admin Platform',
+      description:
+        'Developed a responsive admin system for managing employee records and educational courses while gaining hands-on experience with React and modern UI component libraries.',
+      tags: 'React.js, JavaScript, Bootstrap, React Bootstrap, Ant Design, MUI',
+      link: 'https://byjus.com',
+    },
+    {
+      id: 9,
+      title: 'Shopping Cart System',
+      type: 'CRUD learning project',
+      description:
+        'Built a CRUD-based Shopping Cart application while learning JavaScript and React, with hands-on experience in building interactive user interfaces.',
+      tags: 'JavaScript, React.js, HTML, CSS',
+      link: 'https://github.com/devparekh24/cart-app',
     },
   ],
 };
@@ -116,10 +515,82 @@ const uid = () => Date.now();
 const apiBase = import.meta.env.VITE_API_URL?.replace(/\/$/, '') || '';
 const apiUrl = (path) => `${apiBase}${path}`;
 
+const SKILLS_PREVIEW = 4; // how many skills to show before "Show more"
+
+function SkillCard({ category, skills, index, totalCategories }) {
+  const [expanded, setExpanded] = useState(false);
+  const extraRef = React.useRef(null);
+  const hasMore = skills.length > SKILLS_PREVIEW;
+  const visible = expanded ? skills : skills.slice(0, SKILLS_PREVIEW);
+  const hidden = skills.slice(SKILLS_PREVIEW);
+
+  return (
+    <article className={`skill-card tone-${index % 6}`}>
+      {/* Header row: counter + count badge + glow dot */}
+      <div className="skill-card-top">
+        <span>
+          {String(index + 1).padStart(2, '0')} / {String(totalCategories).padStart(2, '0')}
+        </span>
+        <span className="skill-count-badge">{skills.length} skills</span>
+        <i />
+      </div>
+
+      <h3>{category}</h3>
+      <p>
+        — {skills.length} {skills.length === 1 ? 'skill' : 'skills'} in this area
+      </p>
+
+      {/* Always-visible skills */}
+      <div className="skill-list">
+        {visible.map((skill) => (
+          <div key={skill.id}>
+            <span>{skill.name}</span>
+            <b>{skill.level || 'Proficient'}</b>
+          </div>
+        ))}
+      </div>
+
+      {/* Collapsible extra skills */}
+      {hasMore && (
+        <>
+          <div
+            className={`skill-list-extra ${expanded ? 'expanded' : ''}`}
+            ref={extraRef}
+            style={{
+              maxHeight: expanded ? `${hidden.length * 46}px` : '0px',
+            }}
+          >
+            {hidden.map((skill) => (
+              <div key={skill.id}>
+                <span>{skill.name}</span>
+                <b>{skill.level || 'Proficient'}</b>
+              </div>
+            ))}
+          </div>
+
+          <button
+            className="skill-toggle"
+            onClick={() => setExpanded((e) => !e)}
+            aria-expanded={expanded}
+          >
+            {expanded ? <>↑ Show less</> : <>↓ Show {hidden.length} more</>}
+          </button>
+        </>
+      )}
+    </article>
+  );
+}
+
 function App() {
   const [data, setData] = useState(initialData);
   const [menu, setMenu] = useState(false);
-  const [theme, setTheme] = useState(() => localStorage.getItem('portfolio-theme') || 'dark');
+  const [theme, setTheme] = useState(() => {
+    try {
+      return localStorage.getItem('portfolio-theme') || 'dark';
+    } catch {
+      return 'dark';
+    }
+  });
   const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
   const deploymentPath = new URLSearchParams(window.location.search).get('path');
   if (deploymentPath)
@@ -147,11 +618,9 @@ function App() {
   return (
     <div>
       <header>
-        <a className="brand" href="#top">
-          {p.name
-            .split(' ')
-            .map((x) => x[0])
-            .join('')}
+        <a className="brand-name" href="#top">
+          <span className="first-name">{p.name.split(' ')[0]}</span>
+          <span className="first-name">{p.name.split(' ')[1]}</span>
         </a>
         <div className="header-actions">
           <button className="menu" onClick={() => setMenu(!menu)} aria-label="Toggle navigation">
@@ -159,18 +628,11 @@ function App() {
           </button>
         </div>
         <nav className={menu ? 'open' : ''}>
-          <a href="#work">Work</a>
+          <a href="#work">Work & Projects</a>
           <a href="#skills">Skills</a>
-          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          {/* <a href="#about">About</a> */}
           <a href="#contact">Contact</a>
-          <button
-            className="theme-toggle"
-            onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-            aria-label={theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'}
-            title={theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'}
-          >
-            {theme === 'light' ? <Moon size={17} /> : <Sun size={17} />}
-          </button>
         </nav>
       </header>
       <main id="top">
@@ -180,11 +642,11 @@ function App() {
               <span /> {p.availability}
             </p>
             <h1>
-              Building digital
+              Building scalable
               <br />
-              <em>things</em> with care.
+              <em>Applications </em> with Modern Tech.
             </h1>
-            <p className="lede">{p.intro}</p>
+            {/* <p className="lede">{p.intro}</p> */}
             <div className="actions">
               <a className="button" href="#work">
                 Explore my work <ArrowUpRight size={17} />
@@ -209,17 +671,20 @@ function App() {
                 />
               </div>
             ) : (
-              <Code2 size={78} />
+              <></>
             )}
           </div>
         </section>
         <section className="strip">
           <span>
-            <Sparkles size={17} /> {p.role}
+            <Sparkles size={18} /> {p.role}
           </span>
           <span>
             <span className="dot" /> {p.location}
           </span>
+        </section>
+        <section className="intro-section">
+          <p className="intro-text">{p.intro}</p>
         </section>
         <section id="work" className="section">
           <div className="section-heading">
@@ -229,7 +694,7 @@ function App() {
           </div>
           <div className="projects">
             {data.projects.map((x, i) => (
-              <article className={`project p${i}`} key={x.id}>
+              <article className={`project p${i % 3}`} key={x.id}>
                 <div className="project-visual">
                   <span>{String(i + 1).padStart(2, '0')}</span>
                   <FolderGit2 size={46} />
@@ -260,7 +725,7 @@ function App() {
         </section>
         <section id="skills" className="skills-section section">
           <div className="section-heading skills-heading">
-            <p className="eyebrow">02 / Capabilities</p>
+            <p className="eyebrow">Capabilities</p>
             <h2>
               Tools I use to make
               <br />
@@ -270,41 +735,20 @@ function App() {
           <div className="skill-cards">
             {[...new Set(data.skills.map((skill) => skill.category))].map((category, index) => {
               const skills = data.skills.filter((skill) => skill.category === category);
+              const totalCategories = new Set(data.skills.map((s) => s.category)).size;
               return (
-                <article className={`skill-card tone-${index % 6}`} key={category}>
-                  <div className="skill-card-top">
-                    <span>
-                      {String(index + 1).padStart(2, '0')} /{' '}
-                      {String(new Set(data.skills.map((skill) => skill.category)).size).padStart(
-                        2,
-                        '0'
-                      )}
-                    </span>
-                    <i />
-                  </div>
-                  <h3>{category}</h3>
-                  <p>
-                    —{' '}
-                    {category === 'Interface'
-                      ? 'Frontend'
-                      : category === 'Server & APIs'
-                        ? 'Backend'
-                        : 'Technical craft'}
-                  </p>
-                  <div className="skill-list">
-                    {skills.map((skill) => (
-                      <div key={skill.id}>
-                        <span>{skill.name}</span>
-                        <b>{skill.level || 'Proficient'}</b>
-                      </div>
-                    ))}
-                  </div>
-                </article>
+                <SkillCard
+                  key={category}
+                  category={category}
+                  skills={skills}
+                  index={index}
+                  totalCategories={totalCategories}
+                />
               );
             })}
           </div>
         </section>
-        <section id="about" className="about section">
+        {/* <section id="about" className="about section">
           <div className="section-heading">
             <p className="eyebrow">A little about me</p>
             <h2>
@@ -332,8 +776,8 @@ function App() {
               ))}
             </div>
           </div>
-        </section>
-        <section className="experience section">
+        </section> */}
+        <section id="experience" className="experience section">
           <div className="section-heading">
             <p className="eyebrow">Experience</p>
             <h2>Places I’ve learned.</h2>
@@ -353,7 +797,7 @@ function App() {
         </section>
         <section className="education-section section">
           <div className="section-heading credentials-heading">
-            <p className="eyebrow">04 / Credentials</p>
+            <p className="eyebrow">Credentials</p>
             <h2>
               Where I <em>studied.</em>
             </h2>
@@ -373,14 +817,16 @@ function App() {
         </section>
         <section id="contact" className="contact">
           <p className="eyebrow">Have a project in mind?</p>
-          <h2>
-            Let’s make something
-            <br />
-            <em>meaningful.</em>
-          </h2>
-          <a className="button light" href={`mailto:${p.email}`}>
-            Start a conversation <ArrowUpRight size={17} />
-          </a>
+          <div className="contact-section-heading">
+            <h2>
+              Let’s build it
+              <br />
+              <em>together.</em>
+            </h2>
+            <a className="button light" href={`mailto:${p.email}`}>
+              Start a conversation <ArrowUpRight size={17} />
+            </a>
+          </div>
         </section>
       </main>
       <footer>
@@ -433,17 +879,10 @@ function AdminGate({ data, setData, theme, setTheme }) {
     return (
       <main className="login-page">
         <div className="login-actions">
-          <a className="brand" href={import.meta.env.BASE_URL}>
-            AM
+          <a className="brand-name" href={import.meta.env.BASE_URL}>
+            <span className="first-name">Dev</span>
+            <span className="first-name">Parekh</span>
           </a>
-          <button
-            className="theme-toggle"
-            onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-            aria-label={theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'}
-            title={theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'}
-          >
-            {theme === 'light' ? <Moon size={17} /> : <Sun size={17} />}
-          </button>
         </div>
         <form className="login-card" onSubmit={login}>
           <LockKeyhole size={24} />
@@ -555,11 +994,9 @@ function Admin({ data, setData, token, theme, setTheme, logout }) {
   return (
     <div className="admin">
       <aside>
-        <a className="brand">
-          {draft.profile.name
-            .split(' ')
-            .map((x) => x[0])
-            .join('')}
+        <a className="brand-name">
+          <span className="first-name">{draft.profile.name.split(' ')[0]}</span>
+          <span className="last-name">{draft.profile.name.split(' ')[1]}</span>
         </a>
         <p>CONTENT STUDIO</p>
         {tabs.map(([id, label]) => (
