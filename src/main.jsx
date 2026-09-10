@@ -628,11 +628,21 @@ function App() {
           </button>
         </div>
         <nav className={menu ? 'open' : ''}>
-          <a href="#work">Work & Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#experience">Experience</a>
-          {/* <a href="#about">About</a> */}
-          <a href="#contact">Contact</a>
+          <a className="nav-link" href="#work">
+            Work & Projects
+          </a>
+          <a className="nav-link" href="#skills">
+            Skills
+          </a>
+          <a className="nav-link" href="#experience">
+            Experience
+          </a>
+          {/* <a className="nav-link" href="#about">
+            About
+          </a> */}
+          <a className="nav-link" href="#contact">
+            Contact
+          </a>
         </nav>
       </header>
       <main id="top">

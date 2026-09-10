@@ -1298,6 +1298,7 @@ footer div {
   }
 
   .menu {
+    color: #00a8e8;
     display: block;
   }
 
@@ -1322,6 +1323,10 @@ footer div {
 
   nav.open {
     display: flex;
+  }
+
+  nav a.nav-link {
+    width: 100%;
   }
 
   .hero,
