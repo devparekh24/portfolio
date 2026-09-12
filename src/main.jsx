@@ -24,6 +24,43 @@ import {
 } from 'lucide-react';
 import './styles.css';
 
+const Github = ({ size = 24, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+    <path d="M9 18c-4.51 2-5-2-7-2" />
+  </svg>
+);
+
+const Linkedin = ({ size = 24, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect width="4" height="12" x="2" y="9" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+);
+
 const initialData = {
   profile: {
     name: 'Dev Parekh',
@@ -45,11 +82,13 @@ const initialData = {
       id: 1,
       name: 'JavaScript',
       category: 'Programming',
+      level: 'Advanced',
     },
     {
       id: 2,
       name: 'TypeScript',
       category: 'Programming',
+      level: 'Advanced',
     },
     {
       id: 3,
@@ -75,26 +114,31 @@ const initialData = {
       id: 7,
       name: 'React.js',
       category: 'Frontend',
+      level: 'Advanced',
     },
     {
       id: 8,
       name: 'Next.js',
       category: 'Frontend',
+      level: 'Advanced',
     },
     {
       id: 9,
       name: 'Redux',
       category: 'Frontend',
+      level: 'Advanced',
     },
     {
       id: 10,
       name: 'Redux Toolkit',
       category: 'Frontend',
+      level: 'Advanced',
     },
     {
       id: 11,
       name: 'Redux Thunk',
       category: 'Frontend',
+      level: 'Advanced',
     },
     {
       id: 12,
@@ -105,56 +149,67 @@ const initialData = {
       id: 13,
       name: 'RTK Query',
       category: 'Frontend',
+      level: 'Advanced',
     },
     {
       id: 14,
       name: 'HTML5',
       category: 'Frontend',
+      level: 'Advanced',
     },
     {
       id: 15,
       name: 'CSS3',
       category: 'Frontend',
+      level: 'Advanced',
     },
     {
       id: 16,
       name: 'Tailwind CSS',
       category: 'Frontend',
+      level: 'Advanced',
     },
     {
       id: 17,
       name: 'Bootstrap',
       category: 'Frontend',
+      level: 'Advanced',
     },
     {
       id: 18,
       name: 'React Bootstrap',
       category: 'Frontend',
+      level: 'Advanced',
     },
     {
       id: 19,
       name: 'Material UI',
       category: 'Frontend',
+      level: 'Advanced',
     },
     {
       id: 20,
       name: 'Ant Design',
       category: 'Frontend',
+      level: 'Advanced',
     },
     {
       id: 21,
       name: 'Node.js',
       category: 'Backend',
+      level: 'Advanced',
     },
     {
       id: 22,
       name: 'Express.js',
       category: 'Backend',
+      level: 'Advanced',
     },
     {
       id: 23,
       name: 'NestJS',
       category: 'Backend',
+      level: 'Advanced',
     },
     {
       id: 24,
@@ -165,26 +220,31 @@ const initialData = {
       id: 25,
       name: 'REST APIs',
       category: 'Backend',
+      level: 'Advanced',
     },
     {
       id: 26,
       name: 'GraphQL',
       category: 'Backend',
+      level: 'Advanced',
     },
     {
       id: 27,
       name: 'Socket.IO',
       category: 'Backend',
+      level: 'Advanced',
     },
     {
       id: 28,
       name: 'Webhooks',
       category: 'Backend',
+      level: 'Advanced',
     },
     {
       id: 29,
       name: 'Microservices',
       category: 'Architecture',
+      level: 'Advanced',
     },
     {
       id: 30,
@@ -195,6 +255,7 @@ const initialData = {
       id: 31,
       name: 'MongoDB',
       category: 'Database',
+      level: 'Advanced',
     },
     {
       id: 32,
@@ -205,6 +266,7 @@ const initialData = {
       id: 33,
       name: 'PostgreSQL',
       category: 'Database',
+      level: 'Advanced',
     },
     {
       id: 34,
@@ -260,6 +322,7 @@ const initialData = {
       id: 44,
       name: 'GCP Pub/Sub',
       category: 'Cloud',
+      level: 'Advanced',
     },
     {
       id: 45,
@@ -285,16 +348,19 @@ const initialData = {
       id: 49,
       name: 'Git',
       category: 'Tools',
+      level: 'Advanced',
     },
     {
       id: 50,
       name: 'GitHub',
       category: 'Tools',
+      level: 'Advanced',
     },
     {
       id: 51,
       name: 'Postman',
       category: 'Tools',
+      level: 'Advanced',
     },
     {
       id: 52,
@@ -305,6 +371,7 @@ const initialData = {
       id: 53,
       name: 'VS Code',
       category: 'Tools',
+      level: 'Advanced',
     },
     {
       id: 54,
@@ -320,16 +387,19 @@ const initialData = {
       id: 56,
       name: 'Jest',
       category: 'Testing',
+      level: 'Advanced',
     },
     {
       id: 57,
       name: 'Playwright',
       category: 'Testing',
+      level: 'Advanced',
     },
     {
       id: 58,
       name: 'E2E Testing',
       category: 'Testing',
+      level: 'Advanced',
     },
     {
       id: 59,
@@ -340,6 +410,7 @@ const initialData = {
       id: 60,
       name: 'Claude AI',
       category: 'GenAI',
+      level: 'Advanced',
     },
     {
       id: 61,
@@ -375,11 +446,13 @@ const initialData = {
       id: 67,
       name: 'HubSpot APIs',
       category: 'Integrations',
+      level: 'Advanced',
     },
     {
       id: 68,
       name: 'HubSpot Custom Associations',
       category: 'Integrations',
+      level: 'Advanced',
     },
     {
       id: 69,
@@ -521,7 +594,7 @@ function SkillCard({ category, skills, index, totalCategories }) {
   const [expanded, setExpanded] = useState(false);
   const extraRef = React.useRef(null);
   const hasMore = skills.length > SKILLS_PREVIEW;
-  const visible = expanded ? skills : skills.slice(0, SKILLS_PREVIEW);
+  const visible = skills.slice(0, SKILLS_PREVIEW);
   const hidden = skills.slice(SKILLS_PREVIEW);
 
   return (
@@ -545,7 +618,9 @@ function SkillCard({ category, skills, index, totalCategories }) {
         {visible.map((skill) => (
           <div key={skill.id}>
             <span>{skill.name}</span>
-            <b>{skill.level || 'Proficient'}</b>
+            <b className={skill.level === 'Advanced' ? 'level-advanced' : ''}>
+              {skill.level || 'Proficient'}
+            </b>
           </div>
         ))}
       </div>
@@ -563,7 +638,9 @@ function SkillCard({ category, skills, index, totalCategories }) {
             {hidden.map((skill) => (
               <div key={skill.id}>
                 <span>{skill.name}</span>
-                <b>{skill.level || 'Proficient'}</b>
+                <b className={skill.level === 'Advanced' ? 'level-advanced' : ''}>
+                  {skill.level || 'Proficient'}
+                </b>
               </div>
             ))}
           </div>
@@ -661,8 +738,8 @@ function App() {
               <a className="button" href="#work">
                 Explore my work <ArrowUpRight size={17} />
               </a>
-              <a className="text-link" href={`mailto:${p.email}`}>
-                Let’s work together <ArrowUpRight size={16} />
+              <a className="button light" href={`mailto:${p.email}`}>
+                Let’s work together <ArrowUpRight size={17} />
               </a>
             </div>
           </div>
@@ -686,12 +763,31 @@ function App() {
           </div>
         </section>
         <section className="strip">
-          <span>
-            <Sparkles size={18} /> {p.role}
-          </span>
-          <span>
-            <span className="dot" /> {p.location}
-          </span>
+          <div className="strip-info">
+            <span>
+              <Sparkles size={18} /> {p.role}
+            </span>
+            <span>
+              <span className="dot" /> {p.location}
+            </span>
+          </div>
+          <div className="strip-actions">
+            <a href={`mailto:${p.email}`} aria-label="Email">
+              <span>
+                <Mail size={16} /> Email
+              </span>
+            </a>
+            <a href={p.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <span>
+                <Linkedin size={16} /> LinkedIn
+              </span>
+            </a>
+            <a href={p.github} target="_blank" rel="noreferrer" aria-label="GitHub">
+              <span>
+                <Github size={16} /> GitHub
+              </span>
+            </a>
+          </div>
         </section>
         <section className="intro-section">
           <p className="intro-text">{p.intro}</p>
@@ -833,9 +929,14 @@ function App() {
               <br />
               <em>together.</em>
             </h2>
-            <a className="button light" href={`mailto:${p.email}`}>
-              Start a conversation <ArrowUpRight size={17} />
-            </a>
+            <div className="contact-actions">
+              <a className="button light" href={`mailto:${p.email}`}>
+                <Mail size={17} /> Email Me <ArrowUpRight size={17} />
+              </a>
+              <a className="button light" href={p.linkedin} target="_blank" rel="noreferrer">
+                <Linkedin size={17} /> LinkedIn <ArrowUpRight size={17} />
+              </a>
+            </div>
           </div>
         </section>
       </main>

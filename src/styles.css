@@ -620,19 +620,39 @@ h1 em {
 
 .strip {
   display: flex;
+  justify-content: space-between;
   gap: 55px;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   padding-top: 19px;
+  /* padding-left: 60px;
+  padding-right: 60px; */
   padding-bottom: 19px;
   font: 14px 'DM Mono';
   color: var(--muted);
+}
+
+.strip > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 44px;
 }
 
 .strip span {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.strip a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.strip a:hover {
+  color: var(--ink);
 }
 
 .dot {
@@ -798,13 +818,22 @@ h1 em {
   color: var(--muted);
   font: 14px 'DM Mono';
 }
-.skill-list b {
+.skill-list b,
+.skill-list-extra b {
   color: var(--accent);
   border: 1px solid color-mix(in srgb, var(--accent) 70%, transparent);
   padding: 3px 6px;
   text-transform: uppercase;
   font-size: 10px;
   letter-spacing: 1px;
+}
+
+.skill-list b.level-advanced,
+.skill-list-extra b.level-advanced {
+  background: var(--accent);
+  color: var(--cream);
+  border-color: var(--accent);
+  font-weight: 700;
 }
 
 /* Collapsible extra skills */
@@ -1116,7 +1145,7 @@ h1 em {
 }
 
 .contact h2 {
-  font-size: clamp(43px, 8vw, 88px);
+  font-size: clamp(43px, 8vw, 93px);
   line-height: 0.98;
   letter-spacing: -3px;
 }
@@ -1128,15 +1157,28 @@ h1 em {
   background-clip: text;
 }
 
+.contact-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  /* margin-top: 24px; */
+}
+
 .light {
-  width: 200px;
-  background: #ff8b6e;
-  color: #201914;
-  margin-top: 15px;
+  border: 1px solid #ff8b6e;
+  background: transparent;
+  color: #ff8b6e;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  /* border-radius: 8px; */
 }
 
 .light:hover {
   background: #ffad96;
+  color: var(--cream);
   box-shadow: 0 10px 28px color-mix(in srgb, #ff8b6e 44%, transparent);
 }
 
