@@ -17,12 +17,14 @@
     {
       "id": 1,
       "name": "JavaScript",
-      "category": "Programming"
+      "category": "Programming",
+      "level": "Advanced"
     },
     {
       "id": 2,
       "name": "TypeScript",
-      "category": "Programming"
+      "category": "Programming",
+      "level": "Advanced"
     },
     {
       "id": 3,
@@ -47,27 +49,32 @@
     {
       "id": 7,
       "name": "React.js",
-      "category": "Frontend"
+      "category": "Frontend",
+      "level": "Advanced"
     },
     {
       "id": 8,
       "name": "Next.js",
-      "category": "Frontend"
+      "category": "Frontend",
+      "level": "Advanced"
     },
     {
       "id": 9,
       "name": "Redux",
-      "category": "Frontend"
+      "category": "Frontend",
+      "level": "Advanced"
     },
     {
       "id": 10,
       "name": "Redux Toolkit",
-      "category": "Frontend"
+      "category": "Frontend",
+      "level": "Advanced"
     },
     {
       "id": 11,
       "name": "Redux Thunk",
-      "category": "Frontend"
+      "category": "Frontend",
+      "level": "Advanced"
     },
     {
       "id": 12,
@@ -77,57 +84,68 @@
     {
       "id": 13,
       "name": "RTK Query",
-      "category": "Frontend"
+      "category": "Frontend",
+      "level": "Advanced"
     },
     {
       "id": 14,
       "name": "HTML5",
-      "category": "Frontend"
+      "category": "Frontend",
+      "level": "Advanced"
     },
     {
       "id": 15,
       "name": "CSS3",
-      "category": "Frontend"
+      "category": "Frontend",
+      "level": "Advanced"
     },
     {
       "id": 16,
       "name": "Tailwind CSS",
-      "category": "Frontend"
+      "category": "Frontend",
+      "level": "Advanced"
     },
     {
       "id": 17,
       "name": "Bootstrap",
-      "category": "Frontend"
+      "category": "Frontend",
+      "level": "Advanced"
     },
     {
       "id": 18,
       "name": "React Bootstrap",
-      "category": "Frontend"
+      "category": "Frontend",
+      "level": "Advanced"
     },
     {
       "id": 19,
       "name": "Material UI",
-      "category": "Frontend"
+      "category": "Frontend",
+      "level": "Advanced"
     },
     {
       "id": 20,
       "name": "Ant Design",
-      "category": "Frontend"
+      "category": "Frontend",
+      "level": "Advanced"
     },
     {
       "id": 21,
       "name": "Node.js",
-      "category": "Backend"
+      "category": "Backend",
+      "level": "Advanced"
     },
     {
       "id": 22,
       "name": "Express.js",
-      "category": "Backend"
+      "category": "Backend",
+      "level": "Advanced"
     },
     {
       "id": 23,
       "name": "NestJS",
-      "category": "Backend"
+      "category": "Backend",
+      "level": "Advanced"
     },
     {
       "id": 24,
@@ -137,27 +155,32 @@
     {
       "id": 25,
       "name": "REST APIs",
-      "category": "Backend"
+      "category": "Backend",
+      "level": "Advanced"
     },
     {
       "id": 26,
       "name": "GraphQL",
-      "category": "Backend"
+      "category": "Backend",
+      "level": "Advanced"
     },
     {
       "id": 27,
       "name": "Socket.IO",
-      "category": "Backend"
+      "category": "Backend",
+      "level": "Advanced"
     },
     {
       "id": 28,
       "name": "Webhooks",
-      "category": "Backend"
+      "category": "Backend",
+      "level": "Advanced"
     },
     {
       "id": 29,
       "name": "Microservices",
-      "category": "Architecture"
+      "category": "Architecture",
+      "level": "Advanced"
     },
     {
       "id": 30,
@@ -167,7 +190,8 @@
     {
       "id": 31,
       "name": "MongoDB",
-      "category": "Database"
+      "category": "Database",
+      "level": "Advanced"
     },
     {
       "id": 32,
@@ -177,7 +201,8 @@
     {
       "id": 33,
       "name": "PostgreSQL",
-      "category": "Database"
+      "category": "Database",
+      "level": "Advanced"
     },
     {
       "id": 34,
@@ -232,7 +257,8 @@
     {
       "id": 44,
       "name": "GCP Pub/Sub",
-      "category": "Cloud"
+      "category": "Cloud",
+      "level": "Advanced"
     },
     {
       "id": 45,
@@ -257,17 +283,20 @@
     {
       "id": 49,
       "name": "Git",
-      "category": "Tools"
+      "category": "Tools",
+      "level": "Advanced"
     },
     {
       "id": 50,
       "name": "GitHub",
-      "category": "Tools"
+      "category": "Tools",
+      "level": "Advanced"
     },
     {
       "id": 51,
       "name": "Postman",
-      "category": "Tools"
+      "category": "Tools",
+      "level": "Advanced"
     },
     {
       "id": 52,
@@ -277,7 +306,8 @@
     {
       "id": 53,
       "name": "VS Code",
-      "category": "Tools"
+      "category": "Tools",
+      "level": "Advanced"
     },
     {
       "id": 54,
@@ -292,17 +322,20 @@
     {
       "id": 56,
       "name": "Jest",
-      "category": "Testing"
+      "category": "Testing",
+      "level": "Advanced"
     },
     {
       "id": 57,
       "name": "Playwright",
-      "category": "Testing"
+      "category": "Testing",
+      "level": "Advanced"
     },
     {
       "id": 58,
       "name": "E2E Testing",
-      "category": "Testing"
+      "category": "Testing",
+      "level": "Advanced"
     },
     {
       "id": 59,
@@ -312,7 +345,8 @@
     {
       "id": 60,
       "name": "Claude AI",
-      "category": "GenAI"
+      "category": "GenAI",
+      "level": "Advanced"
     },
     {
       "id": 61,
@@ -347,12 +381,14 @@
     {
       "id": 67,
       "name": "HubSpot APIs",
-      "category": "Integrations"
+      "category": "Integrations",
+      "level": "Advanced"
     },
     {
       "id": 68,
       "name": "HubSpot Custom Associations",
-      "category": "Integrations"
+      "category": "Integrations",
+      "level": "Advanced"
     },
     {
       "id": 69,
